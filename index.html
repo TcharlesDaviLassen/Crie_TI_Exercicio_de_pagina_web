@@ -66,8 +66,26 @@
     .banner {
       width: 100%;
       margin-top: 80px;
-      object-fit: cover;/* faz a imagme não esticar*/
+      object-fit: cover;
+      /* faz a imagme não esticar*/
       height: 600px;
+    }
+
+    .search {
+      text-decoration: none;
+      color: white;
+
+    }
+
+    button {
+      background: #f55b01d2;
+      border-radius: 10px;
+      border: none;
+
+      box-shadow: 5px 5px 0 #333;
+      -webkit-box-shadow: 5px 5px 0 #333;
+      -moz-box-shadow: 5px 5px 0 #333;
+
     }
 
     .column {
@@ -119,32 +137,34 @@
       border-radius: 10px;
     }
 
-    header{
+    header {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
       padding: 0 20px;
       position: fixed;
-     
+
       top: 0;
       left: 0;
       right: 0;
       height: 80px;
-     
-      background:white;
+
+      background: white;
     }
 
-    .brand-name{
+    .brand-name {
       color: #f9742b;
       margin-right: 20px;
     }
-    .brand-name a{
+
+    .brand-name a {
       color: inherit;
       text-decoration: none;
     }
-    .brand-phrase{
+
+    .brand-phrase {
       margin-left: 0;
-      margin-right:auto;
+      margin-right: auto;
 
     }
   </style>
@@ -152,25 +172,26 @@
 
 <body>
   <header>
-    
+
     <h1 class="brand-name">
-       <a href="#banner">Olaria Alegria</a>  <!-- usando o hash, serve como ancora para chamar o id banner na section produto-->
+      <a href="#banner">Olaria Alegria</a>
+      <!-- usando o hash, serve como ancora para chamar o id banner na section produto-->
     </h1>
     <h2 class="brand-phrase">Tradição e qualidade na fabricação de tijolos</h2>
     <nav>
-      <a href="#products">Produtos</a>
-      <a href="#about">Sobre</a>
-      <a href="#quote">Orçamento</a>
-      <a href="#contact">Contato</a>
+      <button><a class="search" href="#products">Produtos</a></button>
+      <button><a class="search" href="#products">Produtos</a></button>
+      <button><a class="search" href="#about">Sobre</a></button>
+      <button><a class="search" href="#quote">Orçamento</a></button>
+      <button><a class="search" href="#contact">Contato</a></button>
     </nav>
   </header>
-  
+
   <section id="banner">
     <img class="banner" src="images/banner.jpg" />
   </section>
 
-  <br />
-  <br />
+
   <section id="products" class="container">
     <h3>Produtos</h3>
 
@@ -209,8 +230,9 @@
     <div class="clearfix"></div>
 
   </section>
-  <br />
-  <br />
+
+
+
   <section id="about">
     <div class="container">
       <!--Abertura da div -  Essa div é responsavel por manter o  background de fundo, so altera o conteudo contido  -->
@@ -230,46 +252,63 @@
     </div>
     <!--Fechamento da div -->
   </section>
-  <br />
-  <br />
+
+
   <section id="quote">
+
     <div class="container">
       <!-- Abertura da div - Essa div é responsavel por manter o  background de fundo, so altera o conteudo contido  -->
+
       <h3>Solicite um orçamento</h3>
       <p>Entre em contato conosco via e-mail ou telefone e faça sua cotação. Proporcionamos orientação técnica para
-        aumentar o nível de segurança em sua obra.</p>
+        aumentar o nível de segurança em sua obra.
+      </p>
+
       <form>
-        <label for="name">Nome: </label>
-        <input class="form-item" type="text" id="name" name="name" placeholder="Digite seu nome">
+        <!-- Pra dar inicio ao formulario  -->
 
-        <label for="email">E-mail: </label>
-        <input class="form-item" type="email" id="email" name="email" placeholder="E-mail">
-
-        <label for="phone">Telefone: </label>
-        <input class="form-item" type="tel" id="phone" name="phone" placeholder="Telefone">
-
-        <label for="product">Produto:</label>
-        <select class="form-item" name="product" name="product" id="">
-          <option value="blocos ceramicos">blocos-ceramicos</option>
-          <option value="Lajes">Lajes</option>
-          <option value="artefatos de concreto">artefatos-de-concreto</option>
-          <option value="estruturas pre moldadas">estruturas-pre-moldadas</option>
-        </select>
-
-        <label for="attachments">Anexos</label>
-        <input class="form-item" type="file" id="attachments" name="attachments">
-
-        <label for="message">Mensagem:</label>
-        <textarea class="form-item" name="message" id="message" placeholder="Mensagem" rows="5"></textarea>
+        <div>
+          <label for="name">Nome: </label>
+          <input class="form-item" type="text" id="name" name="name" placeholder="Digite seu nome">
+        </div>
 
 
-        <input class="form-item" type="submit" value="Enviar">
+        <div>
+          <label for="email">E-mail: </label>
+          <input class="form-item" type="email" id="email" name="email" placeholder="E-mail">
+        </div>
 
+        <div>
+          <label for="phone">Telefone: </label>
+          <input class="form-item" type="tel" id="phone" name="phone" placeholder="Telefone">
+        </div>
+
+        <div>
+          <label for="product">Produto:</label>
+          <select class="form-item" name="product" name="product" id="">
+            <option value="blocos ceramicos">blocos-ceramicos</option>
+            <option value="Lajes">Lajes</option>
+            <option value="artefatos de concreto">artefatos-de-concreto</option>
+            <option value="estruturas pre moldadas">estruturas-pre-moldadas</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="attachments">Anexos</label>
+          <input class="form-item" type="file" id="attachments" name="attachments">
+        </div>
+
+        <div>
+          <label for="message">Mensagem:</label>
+          <textarea class="form-item" name="message" id="message" placeholder="Mensagem" rows="5"></textarea>
+        </div>
+
+        <div>
+          <input class="form-item" type="submit" value="Enviar">
+        </div>
 
       </form>
 
-
-    </div>
   </section>
   <br />
   <br />
@@ -297,7 +336,7 @@
     <span>2022 © Olaria Alegria - Crie_TI</span>
   </footer>
 
-  <p  ></p>
+  <p></p>
 </body>
 
 </html>
